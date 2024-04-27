@@ -22,7 +22,7 @@ title: Python language binding for Web IDL
 
 ```ts
 interface Response {
-    constructor(optional BodyInit? body = null, optional ResponseInit init = {});
+    constructor(...);
 
     readonly attribute USVString url;
     readonly attribute boolean redirected;
@@ -35,9 +35,7 @@ interface Response {
 
 ```py
 class Response:
-    def __init__(self, body = None, init = None):
-        if init is None:
-            init = {}
+    def __init__(...):
         # ...
     
     @property
@@ -52,3 +50,5 @@ class Response:
 ```
 
 </table>
+
+
