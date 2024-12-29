@@ -1,4 +1,5 @@
 plugins:
   - jekyll-gfm-admonitions
+  - jekyll-optional-front-matter
 markdown: GFM
 title: false
