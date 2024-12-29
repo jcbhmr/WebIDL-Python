@@ -1,5 +1,7 @@
 # Use remote_theme to allow additional plugins
 remote_theme: pages-themes/primer@748f4ec7d1c3f96037d5c861395c7a5909353a52 # Jan 16, 2024
+# https://pages.github.com/versions/
+# Need to use Gemfile to add extras.
 plugins:
   - jekyll-gfm-admonitions
 markdown: GFM
