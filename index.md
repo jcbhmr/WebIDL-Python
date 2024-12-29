@@ -233,4 +233,17 @@ An alternative method is to flip the canonicalized state to objects instead of c
 > [!NOTE]
 > Dictionary types are duck-typed objects in JavaScript. This works because JavaScript has easy anonymous object literals that are able to satisfy the `input.property` property access that consumers require of it. JavaScript uses the same `o.property` property access syntax for both anonymous objects (similar conceptually to Python `dict` values) and class attributes. Python uses `d["property"]` for `dict` and `o.property` for class attributes.
 
-Web IDL **dictionary type** values are represented 
+Web IDL **dictionary type** values are represented by Python objects or dictionaries. Properties on the object or keys in the dictionary correspond to dictionary members.
+
+A Python value is converted to a dictionary Web IDL Python value by running the following algorithm:
+
+1. Create a new internal data structure such as a `@dataclass` or a `namedtuple()`.
+2. For every *property* of the *D* definition:
+    1. Try to access `getattr(V, property)`.
+    2. If that fails, fall back to `V[property]`.
+    3. If that fails and the property is not required, set it to the default.
+    3. Otherwise it was required so raise an error.
+3. Return the 
+
+1. Try to do `V.property` for every *property* of the dictionary definition and coerce the resulting value to a Web IDL Python value. Store the results in a new . Per
+2. If any proper
