@@ -1,3 +1,7 @@
+---
+title: Python language binding for Web IDL
+---
+
 - **This version:** https://jcbhmr.me/WebIDL-Python/
 - **Issue tracking:** [GitHub](https://github.com/jcbhmr/WebIDL-Python/issues)
 - **Editors:** [Jacob Hummer](https://jcbhmr.me)
