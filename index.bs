@@ -1,24 +1,21 @@
----
-title: Python language binding for Web IDL
----
+<pre class='metadata'>
+Title: Python language binding for Web IDL
+Shortname: WebIDL-Python
+Status: DREAM
+Repository: jcbhmr/WebIDL-Python
+URL: http://jcbhmr.github.io/WebIDL-Python/
+Editor: Jacob Hummer, jcbhmr@outlook.com, https://jcbhmr.me/
+Abstract: 🐍 A bunch of conventions for representing Web IDL types in Python
+Markup Shorthands: markdown yes, css no
+</pre>
 
-- **This version:** https://jcbhmr.me/WebIDL-Python/
-- **Issue tracking:** [GitHub](https://github.com/jcbhmr/WebIDL-Python/issues)
-- **Editors:** [Jacob Hummer](https://jcbhmr.me)
+# Introduction # {#intro}
 
-[CC0-1.0 License](https://github.com/jcbhmr/WebIDL-Python/blob/main/LICENSE)
+<!--
 
 <small>Not affiliated with Python, W3C, or WHATWG.</small>
 
----
-
-## Abstract
-
-Describe a convention for how Web IDL APIs can be mapped to Python types.
-
-## Introduction
-
-_This section is non-normative._
+# Introduction # {#intro}
 
 Python is similar to JavaScript. Both are dynamically typed, both support overloading, both support optional parameters, both have OOP concepts, both have getters & setters, both have modules, and more.
 
@@ -28,14 +25,17 @@ This section describes how definitions written and defined in [Web IDL](https://
 
 Authors are encouraged to create new Python packages for each specification individually.
 
-> [!TIP]
-> For example, the [Fetch](https://fetch.spec.whatwg.org/) specification could be implemented in your new `awesome-fetch` pip package. This implementation might need types & algorithms from [Streams](https://streams.spec.whatwg.org/) which could be implemented in the `another-streams` pip package. The point is that segmenting packages based on specifications seems like a good idea. It aids in SEO to help searchers corrolate API names like "Fetch API" to a particular pip package.
->
-> Package authors are also encouraged to make use of optional features. For example, a [Fetch](https://fetch.spec.whatwg.org/) implementation needs to provide a `.formData()` parser. This is a heavy dependency. Instead, you can use [optional dependencies](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#dependencies-optional-dependencies) to enable `.formData()` integration only if the user chooses to do so. This helps cut down the "Honey, I imported the entire web browser" phenomenon to a more manageable level.
->
-> > If you wish to make an apple pie from scratch, you must first invent the universe.
->
-> &mdash; Cosmos by Carl Sagan
+<div class=example>
+
+For example, the [Fetch](https://fetch.spec.whatwg.org/) specification could be implemented in your new `awesome-fetch` pip package. This implementation might need types & algorithms from [Streams](https://streams.spec.whatwg.org/) which could be implemented in the `another-streams` pip package. The point is that segmenting packages based on specifications seems like a good idea. It aids in SEO to help searchers corrolate API names like "Fetch API" to a particular pip package.
+
+Package authors are also encouraged to make use of optional features. For example, a [Fetch](https://fetch.spec.whatwg.org/) implementation needs to provide a `.formData()` parser. This is a heavy dependency. Instead, you can use [optional dependencies](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#dependencies-optional-dependencies) to enable `.formData()` integration only if the user chooses to do so. This helps cut down the "Honey, I imported the entire web browser" phenomenon to a more manageable level.
+
+> If you wish to make an apple pie from scratch, you must first invent the universe.
+
+&mdash; Cosmos by Carl Sagan
+
+</div>
 
 ### Python environment
 
@@ -247,3 +247,5 @@ A Python value is converted to a dictionary Web IDL Python value by running the 
 
 1. Try to do `V.property` for every *property* of the dictionary definition and coerce the resulting value to a Web IDL Python value. Store the results in a new . Per
 2. If any proper
+
+-->

@@ -4,7 +4,7 @@
 
 # Python language binding for Web IDL
 
-🐍 A good way to represent Web IDL types in Python
+🐍 A bunch of conventions for representing Web IDL types in Python
 
 <table align=center><td>
 
@@ -31,13 +31,21 @@ button.add_event_listener("click", lambda event: print("Clicked!"))
 📄 Standardizes the mapping of Web IDL ↔ Python types \
 ✅ Ensures uniform patterns across all Web API surfaces
 
-## Usage
-
-There's nothing to install. Just make sure that your bindings to a Python-implemented Web IDL API mostly conform to the concepts and ideas layed out in the specification document. You are free to write a Python implementation of a Web API or try your hand at binding to JavaScript APIs via a Python WASM & JS bridge membrane.
-
 ## Development
 
-![Markdown](https://img.shields.io/static/v1?style=for-the-badge&message=Markdown&color=000000&logo=Markdown&logoColor=FFFFFF&label=)
+![Bikeshed](https://img.shields.io/static/v1?style=for-the-badge&message=Bikeshed&color=000000&label=)
+
+This specification uses [Bikeshed](https://speced.github.io/bikeshed/) as its markup language. Get started by [installing Bikeshed](https://speced.github.io/bikeshed/#install-final):
+
+```sh
+pipx install bikeshed
+```
+
+And then starting a dev server with:
+
+```sh
+bikeshed serve
+```
 
 The document's structure is intended to mimic the [JavaScript binding section](https://webidl.spec.whatwg.org/#javascript-binding) of the Web IDL standard and take inspiration from [the Java binding for Web IDL](https://www.w3.org/TR/WebIDL-Java/).
 
