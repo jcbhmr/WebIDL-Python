@@ -1,3 +1,4 @@
+plugins:
+  - jekyll-gfm-admonitions
 markdown: GFM
-name: ""
 title: false
